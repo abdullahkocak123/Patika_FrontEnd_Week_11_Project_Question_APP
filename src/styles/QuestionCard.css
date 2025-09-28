@@ -1,0 +1,58 @@
+.question-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fafafa;
+
+  width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.question-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  margin-top: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-btn {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: whitesmoke;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+}
+
+.question-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.wait-msg {
+  color: #666;
+  font-style: italic;
+}

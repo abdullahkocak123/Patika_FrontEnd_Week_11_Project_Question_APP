@@ -70,3 +70,5 @@ const questions = [
     media: "fobi.jpg",
   },
 ];
+
+export default questions;

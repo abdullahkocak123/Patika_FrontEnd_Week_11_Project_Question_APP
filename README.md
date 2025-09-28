@@ -1,16 +1,29 @@
-# React + Vite
+# Quiz Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **React-based Quiz Application** where users can answer
+multiple-choice questions with a timer. It demonstrates React hooks,
+state management, and conditional rendering.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Intro screen with "Start Test" button.
+- Questions are displayed one by one.
+- Each question has a **30-second timer**.
+- Options are hidden for the first 4 seconds after a question is
+  shown.
+- If the user selects an option → it is evaluated immediately.
+- If no option is selected in 30 seconds → it is marked as "empty".
+- Results screen at the end showing:
+  - Total number of questions
+  - Correct / Wrong / Empty answers
+  - Detailed results for each question (your answer, correct answer,
+    status).
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (useState, useEffect, useRef)
+- CSS for styling
 
-## Expanding the ESLint configuration
+## 🌍 Live Site
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Check out the live demo here: [Live Site Link](https://incomparable-starship-46df85.netlify.app/)
