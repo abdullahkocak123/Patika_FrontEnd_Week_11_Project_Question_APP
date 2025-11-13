@@ -84,20 +84,21 @@ function App() {
       {!start ? (
         // Info page
         <div className="welcome-screen">
-          <h1>Bilgi Yarışmasına Hoşgeldiniz!</h1>
+          <h1>Welcome to the Quiz!</h1>
           <p>
-            Bu testte birbirinden ilginç ve eğlenceli sorular sizi bekliyor. Her
-            soru için 30 saniyeniz var. Hazır olduğunuzda başlayabilirsiniz.
+            This test contains a variety of interesting and entertaining
+            questions. You have 30 seconds for each question. You can begin when
+            you're ready.
           </p>
           <button className="start-btn" onClick={() => setStart(true)}>
-            Teste Başla
+            Start Quiz
           </button>
         </div>
       ) : !isFinished ? (
         // Questions screen
         <>
           <div className="progress">
-            Soru {currentIndex + 1} / {questions.length} - Kalan Süre:{" "}
+            Question {currentIndex + 1} / {questions.length} - Remaining Time:{" "}
             {timeLeft} s
           </div>
           <QuestionCard
@@ -109,13 +110,13 @@ function App() {
       ) : (
         // Results screen
         <div className="result-screen">
-          <h2>Sorular Bitti</h2>
-          <p>Toplam Soru: {questions.length}</p>
-          <p>Doğru: {correctAnswers} </p>
-          <p>Yanlış: {wrongAnswers} </p>
-          <p>Boş: {emptyAnswers} </p>
+          <h2>Questions are over</h2>
+          <p>Total Questions: {questions.length}</p>
+          <p>Correct: {correctAnswers} </p>
+          <p>Wrong: {wrongAnswers} </p>
+          <p>Empty: {emptyAnswers} </p>
 
-          <h3>Detaylı Sonuçlar:</h3>
+          <h3>Detailed Results:</h3>
           <ul>
             {questions.map((q, idx) => {
               const userAnswer = answers.find((a) => a.questionIndex === idx);
@@ -123,15 +124,15 @@ function App() {
                 <li key={idx}>
                   <strong>{q.question}</strong>
                   <br />
-                  Doğru cevap: {q.answer}
+                  Correct answer: {q.answer}
                   <br />
-                  Senin cevabın: {userAnswer?.answer ? userAnswer.answer : "—"}
+                  Your answer: {userAnswer?.answer ? userAnswer.answer : "—"}
                   {" ("}
                   {userAnswer?.status === "correct"
-                    ? "Doğru"
+                    ? "Correct"
                     : userAnswer?.status === "wrong"
-                    ? "Yanlış"
-                    : "Boş"}
+                    ? "Wrong"
+                    : "Empty"}
                   {")"}
                   <hr />
                 </li>

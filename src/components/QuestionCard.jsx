@@ -12,7 +12,7 @@ function QuestionCard({ question, onAnswer, showOptions }) {
       />
 
       {!showOptions ? (
-        <p className="wait-msg">Şıklar hazırlanıyor... ⏳</p>
+        <p className="wait-msg">Choices are being prepared... ⏳</p>
       ) : (
         <div className="options">
           {question.options.map((option, index) => (
